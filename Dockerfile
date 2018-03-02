@@ -14,6 +14,6 @@ LABEL maintainer="swapnil@swapnil.sonkusare@merce.co"
 #cd /var/lib/jenkins/workspace/images
 #./build.sh
 #./run.sh
-scp -i id_rsa /target/helloworld.war root@192.168.12.111:/var/lib/jenkins/workspace/images/
+SCP -i id_rsa /target/helloworld.war root@192.168.12.111:/var/lib/jenkins/workspace/images/
 #COPY /target/helloworld.war /home/helloworld.war
 CMD ["java","-war","/home/helloworld.war"]
