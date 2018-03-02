@@ -16,7 +16,7 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t localhost:5000/"spring-petclinic:latest" .'
+        sh 'docker build -t swapnil/spring-petclinic:latest .'
       }
     }
   }
