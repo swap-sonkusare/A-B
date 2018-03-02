@@ -16,7 +16,7 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t /var/lib/jenkins/workspace/images/spring-petclinic:latest .'
+        sh 'docker build -t localhost:5000/"spring-petclinic:latest" .'
       }
     }
   }
