@@ -12,6 +12,12 @@ pipeline {
       steps {
         sh 'mvn clean install'
       }
-    } 
+    }
+    stage('Docker Build') {
+      agent any
+      steps {
+        sh 'docker build -t /var/lib/jenkins/workspace/images/spring-petclinic:latest .'
+      }
+    }
   }
 }
